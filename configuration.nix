@@ -5,6 +5,9 @@
     ./hardware-configuration.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   boot.loader.limine.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -15,38 +18,47 @@
   time.timeZone = "Asia/Almaty";
   i18n.defaultLocale = "en_US.UTF-8";
   
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-  services.xserver.enable = true;
-
   programs.niri.enable = true;
+  programs.steam.enable = true;
+  programs.xwayland.enable = true;
+  programs.gamemode.enable = true;
 
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+  hardware.graphics.enable = true;
+
+  services.xserver.enable = true;
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
   users.users.meowkita = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
-      tree
+      godot
+      lutris
+      spotify
+      vesktop
+      obsidian
+      vscodium
+      obs-studio
+      libreoffice
+      prismlauncher
+      telegram-desktop
     ];
   };
 
   environment.systemPackages = with pkgs; [
     git
     wget
+    btop
+    neovim
     fuzzel
     alacritty
+    fastfetch
+    brightnessctl
+    xwayland-satellite
   ];
 
   system.stateVersion = "25.11";
 }
-
