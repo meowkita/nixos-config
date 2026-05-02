@@ -13,6 +13,8 @@
     bibata-cursors
     papirus-icon-theme
 
+    mako
+    waybar
     fuzzel
     obsidian
     vscodium
