@@ -34,28 +34,14 @@
   users.users.meowkita = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    packages = with pkgs; [
-      godot
-      lutris
-      spotify
-      vesktop
-      obsidian
-      vscodium
-      obs-studio
-      libreoffice
-      prismlauncher
-      telegram-desktop
-    ];
   };
 
   environment.systemPackages = with pkgs; [
     git
+    tree
     wget
     btop
     neovim
-    fuzzel
-    alacritty
-    fastfetch
     brightnessctl
     xwayland-satellite
   ];
