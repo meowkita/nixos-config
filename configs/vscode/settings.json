@@ -1,0 +1,55 @@
+{
+  "workbench.iconTheme": "icons",
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 19,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://schema.tauri.app": true
+  },
+  "workbench.colorTheme": "Base16 Tomorrow",
+  "editor.fontFamily": "'JetBrains Mono', 'Times New Roman', monospace",
+  "editor.fontSize": 15,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.lineHeight": 1.67,
+  "editor.formatOnSave": true,
+  "editor.stickyScroll.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 1,
+  "[rust]": {
+    "editor.semanticHighlighting.enabled": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.lens.implementations.enable": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.lens.updateTest.enable": false,
+  "rust-analyzer.lens.debug.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmPasteNative": false
+}

@@ -10,6 +10,10 @@
   home.file.".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
   home.file.".config/alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
 
+  home.file.".vscode-oss/extensions.json".source = ../../configs/vscode/extensions.json;
+  home.file.".config/VSCodium/product.json".source = ../../configs/vscode/product.json;
+  home.file.".config/VSCodium/User/settings.json".source = ../../configs/vscode/settings.json;
+
   home.packages = with pkgs; [
     bibata-cursors
     papirus-icon-theme
