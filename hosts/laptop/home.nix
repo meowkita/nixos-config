@@ -12,7 +12,6 @@
 
   home.file.".config/VSCodium/product.json".source = ../../configs/vscode/product.json;
   home.file.".config/VSCodium/User/settings.json".source = ../../configs/vscode/settings.json;
-  home.file.".vscode-oss/extensions/extensions.json".source = ../../configs/vscode/extensions.json;
 
   home.packages = with pkgs; [
     bibata-cursors
@@ -31,6 +30,22 @@
 
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium;
+
+    extensions = with pkgs.vscode-extensions; [
+      esbenp.prettier-vscode
+      golang.go
+      o4x.base16-tomorrow
+      openai.chatgpt
+      rust-lang.rust-analyzer
+      tal7aouy.icons
+      tamasfe.even-better-toml
+      vscode-icons-team.vscode-icons
+    ];
+  };
 
   gtk = {
     enable = true;
