@@ -40,6 +40,13 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
+  environment.variables = {
+    NIXOS_OZONE_WL = "1";
+    MOZ_ENABLE_WAYLAND = "1";
+    GDK_BACKEND = "wayland";
+    OZONE_PLATFORM = "wayland";
+  };
+
   environment.systemPackages = with pkgs; [
     git
     tree

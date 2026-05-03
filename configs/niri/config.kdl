@@ -33,7 +33,7 @@ overview {
 }
 
 layout {
-    gaps 16
+    gaps 8
     always-center-single-column
     center-focused-column "never"
     background-color "transparent"
@@ -47,14 +47,18 @@ layout {
     preset-window-heights {
         proportion 1.0
     }
-    
+
+    default-column-width {
+        proportion 0.5;
+    }
+
     focus-ring {
         off
     }
 
     border {
         on
-        width 4
+        width 2
         active-gradient from="#cc2d87" to="#ff6998" angle=45
         inactive-gradient from="#505050" to="#808080" angle=45
         urgent-color "#9b0000"
@@ -62,8 +66,9 @@ layout {
 }
 
 window-rule {
-    geometry-corner-radius 8
     clip-to-geometry true
+    geometry-corner-radius 8
+    draw-border-with-background false
 }
 
 binds {
@@ -113,6 +118,8 @@ binds {
 hotkey-overlay {
     skip-at-startup
 }
+
+prefer-no-csd
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 

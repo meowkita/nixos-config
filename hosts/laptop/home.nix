@@ -28,10 +28,26 @@
 
   gtk = {
     enable = true;
+    
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
+
+    cursorTheme = {
+      size = 24;
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+    };
+  };
+
+  home.pointerCursor = {
+    size = 24;
+    name = "Bibata-Modern-Ice";
+    package = pkgs.bibata-cursors;
+
+    gtk.enable = true;
+    x11.enable = true;
   };
 
   dconf.settings = {
