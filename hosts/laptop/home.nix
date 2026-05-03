@@ -6,6 +6,7 @@
   home.homeDirectory = "/home/meowkita";
   
   home.file.".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
+  home.file.".config/swaylock/config".source = ../../configs/swaylock/config;
   home.file.".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
   home.file.".config/alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
 

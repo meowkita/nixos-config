@@ -67,8 +67,9 @@ window-rule {
 }
 
 binds {
-    Mod+Q { spawn "alacritty"; }
     Mod+A { spawn "fuzzel"; }
+    Mod+L { spawn "swaylock"; }
+    Mod+Q { spawn "alacritty"; }
 
     Mod+C   { close-window; }
     Mod+Tab { toggle-overview; }
@@ -117,3 +118,4 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 spawn-at-startup "mako"
 spawn-at-startup "waybar"
+spawn-at-startup "swayidle" "-w" "timeout" "300"  "swaylock -f" "timeout 600" "niri msg action power-off-monitors" "resume" "niri msg action power-on-monitors" "before-sleep" "swaylock -f"
