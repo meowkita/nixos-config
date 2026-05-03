@@ -10,6 +10,7 @@
 
   boot.loader.limine.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.consoleLogLevel = 3;
 
   networking.hostName = "laptop";
   networking.networkmanager.enable = true;
@@ -19,9 +20,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
   
   programs.niri.enable = true;
-  programs.steam.enable = true;
   programs.xwayland.enable = true;
-  programs.gamemode.enable = true;
 
   hardware.graphics.enable = true;
 
