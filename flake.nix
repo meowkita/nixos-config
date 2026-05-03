@@ -9,20 +9,20 @@
     };
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";   
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, zen-browser }: {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-      modules = [ 
-        ./configuration.nix
+      modules = [
+        ./hosts/laptop/configuration.nix
 
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.users.meowkita = import ./home.nix;
+          home-manager.users.meowkita = import ./hosts/laptop/home.nix;
         }
       ];
     };
