@@ -19,8 +19,10 @@
     fuzzel
     obsidian
     vscodium
+    swayidle
     fastfetch
     alacritty
+    swaylock-effects
     telegram-desktop
 
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default

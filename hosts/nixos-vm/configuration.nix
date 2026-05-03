@@ -44,7 +44,6 @@
     tree
     wget
     neovim
-    xwayland-satellite
   ];
 
   system.stateVersion = "25.11";
