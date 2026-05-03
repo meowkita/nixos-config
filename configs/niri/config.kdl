@@ -71,6 +71,20 @@ window-rule {
     draw-border-with-background false
 }
 
+window-rule {
+    match app-id="VSCodium"
+    default-column-width { 
+        proportion 1.0;
+    }
+}
+
+window-rule {
+    match app-id="zen"
+    default-column-width {
+        proportion 0.66666;
+    }
+}
+
 binds {
     Mod+A { spawn "fuzzel"; }
     Mod+L { spawn "swaylock"; }
