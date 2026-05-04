@@ -27,6 +27,19 @@
       ];
     };
 
+    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+      modules = [
+        ./hosts/nixos-vm/configuration.nix
+
+        # home-manager.nixosModules.home-manager {
+        #   home-manager.useGlobalPkgs = true;
+        #   home-manager.useUserPackages = true;
+        #   home-manager.extraSpecialArgs = { inherit inputs; };
+        #   home-manager.users.meowkita = import ./hosts/desktop/home.nix;
+        # }
+      ];
+    };
+
     nixosConfigurations.nixos-vm = nixpkgs.lib.nixosSystem {
       modules = [
         ./hosts/nixos-vm/configuration.nix
