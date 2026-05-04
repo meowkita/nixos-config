@@ -13,7 +13,7 @@
     "https://schema.tauri.app": true
   },
   "workbench.colorTheme": "Base16 Tomorrow",
-  "editor.fontFamily": "'JetBrains Mono', 'Times New Roman', monospace",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Times New Roman', monospace",
   "editor.fontSize": 15,
   "editor.bracketPairColorization.enabled": false,
   "editor.lineHeight": 1.67,

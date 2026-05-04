@@ -31,6 +31,7 @@
   };
 
   fonts.packages = with pkgs; [
+    jetbrains-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
   ];
@@ -43,7 +44,6 @@
   environment.variables = {
     NIXOS_OZONE_WL = "1";
     MOZ_ENABLE_WAYLAND = "1";
-    GDK_BACKEND = "wayland";
     OZONE_PLATFORM = "wayland";
   };
 
