@@ -28,6 +28,10 @@
     swayidle
     fastfetch
     alacritty
+    obs-studio
+    easyeffects
+    lsp-plugins
+    prismlauncher
     swaylock-effects
     telegram-desktop
 

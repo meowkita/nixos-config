@@ -14,7 +14,12 @@
     consoleLogLevel = 3;
   };
 
-  hardware.graphics.enable = true;
+  hardware = {
+    graphics.enable = true;
+    graphics.enable32Bit = true;
+    nvidia.modesetting.enable = true;
+    nvidia.open = true;
+  };
 
   networking = {
     hostName = "desktop";
@@ -25,13 +30,14 @@
   time.timeZone = "Asia/Almaty";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # services = {
-  #   xserver.enable = true;
-  #   pipewire = {
-  #     enable = true;
-  #     pulse.enable = true;
-  #   };
-  # };
+  services = {
+    xserver.enable = true;
+    xserver.videoDrivers = [ "nvidia" ];
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
+  };
 
   environment = {
     variables = {
@@ -40,16 +46,15 @@
       OZONE_PLATFORM = "wayland";
     };
 
-    # systemPackages = with pkgs; [
-    #   git
-    #   tree
-    #   wget
-    #   btop
-    #   neovim
-    #   killall
-    #   brightnessctl
-    #   xwayland-satellite
-    # ];
+    systemPackages = with pkgs; [
+      git
+      tree
+      wget
+      btop
+      neovim
+      killall
+      xwayland-satellite
+    ];
   };
 
   fonts.packages = with pkgs; [
@@ -62,10 +67,12 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
-  # programs = {
-  #   niri.enable = true;
-  #   xwayland.enable = true;
-  # };
+  programs = {
+    niri.enable = true;
+    steam.enable = true;
+    gamemode.enable = true;
+    xwayland.enable = true;
+  };
 
   system.stateVersion = "25.11";
 }
