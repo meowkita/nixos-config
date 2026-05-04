@@ -23,8 +23,10 @@ input {
 }
 
 cursor {
-    xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 24
+    xcursor-theme "Bibata-Modern-Ice"
+    hide-after-inactive-ms 1000
+    hide-when-typing
 }
 
 output "eDP-1" {
@@ -36,6 +38,12 @@ output "eDP-1" {
 
 overview {
     zoom 0.35
+}
+
+gestures {
+    hot-corners {
+        off
+    }
 }
 
 layout {
