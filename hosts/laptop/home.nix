@@ -5,13 +5,15 @@
   home.username = "meowkita";
   home.homeDirectory = "/home/meowkita";
   
-  home.file.".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
-  home.file.".config/swaylock/config".source = ../../configs/swaylock/config;
-  home.file.".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
-  home.file.".config/swaybg/wallpaper.png".source = ../../configs/swaybg/wallpaper.png;
-  home.file.".config/VSCodium/product.json".source = ../../configs/vscode/product.json;
-  home.file.".config/VSCodium/User/settings.json".source = ../../configs/vscode/settings.json;
-  home.file.".config/alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
+  home.file = {
+    ".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
+    ".config/swaylock/config".source = ../../configs/swaylock/config;
+    ".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
+    ".config/swaybg/wallpaper.png".source = ../../configs/swaybg/wallpaper.png;
+    ".config/VSCodium/product.json".source = ../../configs/vscode/product.json;
+    ".config/VSCodium/User/settings.json".source = ../../configs/vscode/settings.json;
+    ".config/alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
+  };
 
   home.packages = with pkgs; [
     bibata-cursors
