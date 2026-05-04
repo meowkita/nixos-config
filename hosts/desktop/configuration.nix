@@ -6,7 +6,16 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix = {
+    settings.experimental-features = [ "nix-command" "flakes" ];
+    optimise.automatic = true;
+    gc = {
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+      automatic = true;
+    };
+  };
 
   boot = {
     loader.limine.enable = true;
@@ -17,6 +26,7 @@
   hardware = {
     graphics.enable = true;
     graphics.enable32Bit = true;
+    bluetooth.enable = true;
     nvidia.modesetting.enable = true;
     nvidia.open = true;
   };

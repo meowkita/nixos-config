@@ -23,6 +23,9 @@
     swaybg
     waybar
     fuzzel
+    lutris
+    vesktop
+    spotify
     obsidian
     vscodium
     swayidle
@@ -30,12 +33,17 @@
     alacritty
     obs-studio
     easyeffects
-    lsp-plugins
     prismlauncher
     swaylock-effects
     telegram-desktop
 
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+    (pkgs.lsp-plugins.overrideAttrs (oldAttrs: {
+      postInstall = ''
+        rm -rf $out/share/applications
+      '';
+    }))
   ];
 
   gtk = {

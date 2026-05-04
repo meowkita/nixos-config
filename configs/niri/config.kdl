@@ -3,8 +3,8 @@ input {
 
     keyboard {
         numlock
-        repeat-rate 20
-        repeat-delay 300
+        repeat-rate 35
+        repeat-delay 200
         track-layout "global"
 
         xkb {
@@ -33,7 +33,7 @@ output "eDP-1" {
     mode "3200x2000@120.000"
     scale 1.75
     transform "normal"
-    position x=1600 y=0
+    position x=1000 y=0
 }
 
 overview {
@@ -83,10 +83,6 @@ window-rule {
     clip-to-geometry true
     geometry-corner-radius 8
     draw-border-with-background false
-}
-
-window-rule {
-    match app-id="Alacritty"
 }
 
 window-rule {
@@ -142,8 +138,8 @@ binds {
     XF86AudioLowerVolume { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
     XF86AudioMute        { spawn-sh "wpctl set-mute   @DEFAULT_AUDIO_SINK@ toggle"; }
 
-    Print           { screenshot; }
-    Ctrl+Alt+Delete { quit;}
+    Mod+Shift+S     { screenshot; }
+    Ctrl+Alt+Delete { quit; }
     Mod+Shift+Slash { show-hotkey-overlay; }
 }
 
@@ -158,4 +154,4 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 spawn-at-startup "mako"
 spawn-at-startup "waybar"
 spawn-sh-at-startup "swaybg -i ~/.config/swaybg/wallpaper.png -m fill"
-spawn-at-startup "swayidle" "-w" "timeout" "300"  "swaylock -f" "timeout 600" "niri msg action power-off-monitors" "resume" "niri msg action power-on-monitors" "before-sleep" "swaylock -f"
+spawn-sh-at-startup "swayidle -w timeout 300 swaylock -f timeout 600 niri msg action power-off-monitors resume niri msg action power-on-monitors before-sleep swaylock -f"
