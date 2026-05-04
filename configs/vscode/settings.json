@@ -51,5 +51,8 @@
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": false,
   "explorer.compactFolders": false,
-  "explorer.confirmPasteNative": false
+  "explorer.confirmPasteNative": false,
+  "files.associations": {
+    "*.kdl": "rust"
+  }
 }
