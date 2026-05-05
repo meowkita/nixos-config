@@ -6,16 +6,29 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
+  
+  nix = {
+    settings.experimental-features = [ "nix-command" "flakes" ];
+    optimise.automatic = true;
+    gc = {
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+      automatic = true;
+    };
+  };
+  
   boot = {
     loader.limine.enable = true;
     loader.efi.canTouchEfiVariables = true;
     consoleLogLevel = 3;
   };
 
-  hardware.graphics.enable = true;
-
+  hardware = {
+    graphics.enable = true;
+    graphics.enable32Bit = true;
+    bluetooth.enable = true;
+  };
+  
   networking = {
     hostName = "laptop";
     networkmanager.enable = true;
