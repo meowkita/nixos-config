@@ -14,43 +14,47 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, zen-browser }: {
-    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-      modules = [
-        ./hosts/laptop/configuration.nix
+    nixosConfigurations = {
 
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.users.meowkita = import ./hosts/laptop/home.nix;
-        }
-      ];
-    };
+      laptop = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./hosts/laptop/configuration.nix
 
-    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-      modules = [
-        ./hosts/desktop/configuration.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.meowkita = import ./hosts/laptop/home.nix;
+          }
+        ];
+      };
 
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.users.meowkita = import ./hosts/desktop/home.nix;
-        }
-      ];
-    };
+      desktop = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./hosts/desktop/configuration.nix
 
-    nixosConfigurations.nixos-vm = nixpkgs.lib.nixosSystem {
-      modules = [
-        ./hosts/nixos-vm/configuration.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.meowkita = import ./hosts/desktop/home.nix;
+          }
+        ];
+      };
 
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.users.meowkita = import ./hosts/nixos-vm/home.nix;
-        }
-      ];
-    };
+      nixos-vm = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./hosts/nixos-vm/configuration.nix
+
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.meowkita = import ./hosts/nixos-vm/home.nix;
+          }
+        ];
+      };
+      
+    };      
   };
 }
