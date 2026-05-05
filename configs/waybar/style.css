@@ -1,6 +1,6 @@
 * {
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 14px;
+  font-size: 15px;
 }
 
 window#waybar {
@@ -25,7 +25,8 @@ window#waybar.empty #window {
 
 #window,
 #clock,
-#tray,
+#cpu,
+#memory,
 #pulseaudio,
 #bluetooth,
 #network,
@@ -35,4 +36,26 @@ window#waybar.empty #window {
   margin: 4px 2px;
   border-radius: 999px;
   background: rgba(68, 49, 63, 0.85);
+}
+
+#workspaces button:hover,
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#power-profiles-daemon:hover {
+  background: rgba(245, 194, 231, 0.22);
+}
+
+#battery.warning {
+  color: #f9e2af;
+}
+
+#battery.critical,
+#network.disconnected,
+#pulseaudio.muted {
+  color: #f38ba8;
 }

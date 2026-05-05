@@ -1,6 +1,4 @@
 input {
-    focus-follows-mouse
-
     keyboard {
         numlock
         repeat-rate 35
@@ -83,6 +81,27 @@ window-rule {
     clip-to-geometry true
     geometry-corner-radius 8
     draw-border-with-background false
+}
+
+window-rule {
+    match app-id="pavucontrol"
+    open-floating true
+    default-column-width { fixed 800; }
+    default-window-height { fixed 800; }
+}
+
+window-rule {
+    match app-id="nm-connection-editor"
+    open-floating true
+    default-column-width { fixed 400; }
+    default-window-height { fixed 600; }
+}
+
+window-rule {
+    match app-id="blueman-manager"
+    open-floating true
+    default-column-width { fixed 400; }
+    default-window-height { fixed 600; }
 }
 
 window-rule {

@@ -26,9 +26,12 @@
   hardware = {
     graphics.enable = true;
     graphics.enable32Bit = true;
-    bluetooth.enable = true;
     nvidia.modesetting.enable = true;
     nvidia.open = true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
   };
 
   networking = {
@@ -41,13 +44,26 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   services = {
+    gvfs.enable = true;
+    udisks2.enable = true;
     xserver.enable = true;
     xserver.videoDrivers = [ "nvidia" ];
+    gnome.gnome-keyring.enable = true;
     pipewire = {
       enable = true;
       pulse.enable = true;
     };
   };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+    ];
+  };
+
+  security.polkit.enable = true;
 
   environment = {
     variables = {
@@ -74,7 +90,7 @@
 
   users.users.meowkita = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "storage" ];
   };
 
   programs = {

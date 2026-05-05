@@ -19,23 +19,32 @@
     bibata-cursors
     papirus-icon-theme
 
+    gvfs
     mako
     swaybg
     waybar
     fuzzel
     lutris
+    blueman
     vesktop
     spotify
+    nautilus
+    cliphist
     obsidian
     vscodium
     swayidle
     fastfetch
     alacritty
     obs-studio
+    pavucontrol
     easyeffects
+    wl-clipboard
     prismlauncher
+    gnome-keyring
     swaylock-effects
     telegram-desktop
+    bitwarden-desktop
+    networkmanagerapplet
 
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
@@ -46,9 +55,23 @@
     }))
   ];
 
+  home.pointerCursor = {
+    size = 24;
+    name = "Bibata-Modern-Ice";
+    package = pkgs.bibata-cursors;
+
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
   gtk = {
     enable = true;
-    
+
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
+
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
@@ -61,13 +84,12 @@
     };
   };
 
-  home.pointerCursor = {
-    size = 24;
-    name = "Bibata-Modern-Ice";
-    package = pkgs.bibata-cursors;
+  xdg.mimeApps = {
+    enable = true;
 
-    gtk.enable = true;
-    x11.enable = true;
+    defaultApplications = {
+      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+    };
   };
 
   dconf.settings = {

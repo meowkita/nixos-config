@@ -1,13 +1,15 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 30,
+  "height": 34,
   "spacing": 8,
   "reload_style_on_change": true,
 
   "modules-left": ["niri/workspaces", "niri/window"],
   "modules-center": ["clock"],
   "modules-right": [
+    "cpu",
+    "memory",
     "pulseaudio",
     "bluetooth",
     "network",
@@ -15,6 +17,33 @@
     "battery",
   ],
 
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+    },
+  },
+  "niri/window": {
+    "format": "{}",
+    "max-length": 60,
+  },
+
+  "clock": {
+    "format": "{:%a %d %b  %H:%M}",
+  },
+
+  "cpu": {
+    "interval": 2,
+    "tooltip": true,
+    "format": " {usage:2}%",
+    "on-click": "alacritty -e btop",
+  },
+  "memory": {
+    "interval": 2,
+    "format": " {}%",
+    "tooltip": true,
+  },
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 muted",
@@ -23,14 +52,19 @@
     },
     "on-click": "pavucontrol",
   },
-
   "bluetooth": {
     "format": "󰂯",
     "format-disabled": "󰂲",
     "format-connected": "󰂱 {num_connections}",
     "on-click": "blueman-manager",
   },
-
+  "network": {
+    "tooltip": false,
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-disconnected": "󰖪 offline",
+    "on-click": "nm-connection-editor",
+  },
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}",
@@ -40,34 +74,8 @@
       "power-saver": "",
     },
   },
-
-  "clock": {
-    "tooltip": false,
-    "format": "{:%a %d %b  %H:%M:%S}",
-  },
-
-  "network": {
-    "format-wifi": "󰖩 {essid}",
-    "format-ethernet": "󰈀 wired",
-    "format-disconnected": "󰖪 offline",
-    "on-click": "nm-connection-editor",
-  },
-
   "battery": {
     "format": "{icon} {capacity}%",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-  },
-
-  "niri/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "active": "",
-      "default": "",
-    },
-  },
-
-  "niri/window": {
-    "format": "{}",
-    "max-length": 60,
   },
 }
