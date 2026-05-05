@@ -200,6 +200,12 @@ prefer-no-csd
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
+spawn-at-startup "Telegram"
+spawn-at-startup "vesktop"
+spawn-at-startup "obsidian"
+spawn-at-startup "spotify"
+spawn-at-startup "obs"
+
 spawn-at-startup "mako"
 spawn-at-startup "waybar"
 spawn-at-startup "nm-applet"
