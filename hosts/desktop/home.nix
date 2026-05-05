@@ -4,11 +4,13 @@
   home.stateVersion = "25.11";
   home.username = "meowkita";
   home.homeDirectory = "/home/meowkita";
-  
+
   home.file = {
     ".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
     ".config/swaylock/config".source = ../../configs/swaylock/config;
     ".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
+    ".config/waybar/style.css".source = ../../configs/waybar/style.css;
+    ".config/waybar/config.jsonc".source = ../../configs/waybar/config.jsonc;
     ".config/swaybg/wallpaper.png".source = ../../configs/swaybg/wallpaper.png;
     ".config/VSCodium/product.json".source = ../../configs/vscode/product.json;
     ".config/VSCodium/User/settings.json".source = ../../configs/vscode/settings.json;
@@ -16,39 +18,43 @@
   };
 
   home.packages = with pkgs; [
+    # theming
     bibata-cursors
     papirus-icon-theme
 
-    gvfs
+    # core desktop
     mako
     swaybg
     waybar
     fuzzel
-    lutris
-    blueman
-    vesktop
-    spotify
-    nautilus
-    cliphist
-    obsidian
-    vscodium
     swayidle
-    fastfetch
+    nautilus
     alacritty
-    obs-studio
+    swaylock-effects
+
+    # system utilities
+    blueman
+    cliphist
+    fastfetch
     pavucontrol
     easyeffects
     wl-clipboard
+
+    # apps
+    lutris
+    blender
+    vesktop
+    spotify
+    obsidian
+    vscodium
+    obs-studio
     prismlauncher
-    gnome-keyring
-    swaylock-effects
     telegram-desktop
     bitwarden-desktop
-    networkmanagerapplet
-
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
-    (pkgs.lsp-plugins.overrideAttrs (oldAttrs: {
+    # overrides / hidden entries
+    (lsp-plugins.overrideAttrs (oldAttrs: {
       postInstall = ''
         rm -rf $out/share/applications
       '';
