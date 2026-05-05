@@ -6,12 +6,12 @@
   home.homeDirectory = "/home/meowkita";
 
   home.file = {
+    ".config/swaybg/nms.jpg".source = ../../configs/swaybg/nms.jpg;
     ".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
     ".config/swaylock/config".source = ../../configs/swaylock/config;
     ".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
     ".config/waybar/style.css".source = ../../configs/waybar/style.css;
     ".config/waybar/config.jsonc".source = ../../configs/waybar/config.jsonc;
-    ".config/swaybg/wallpaper.png".source = ../../configs/swaybg/wallpaper.png;
     ".config/VSCodium/product.json".source = ../../configs/vscode/product.json;
     ".config/VSCodium/User/settings.json".source = ../../configs/vscode/settings.json;
     ".config/alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
