@@ -39,6 +39,7 @@
     pavucontrol
     easyeffects
     wl-clipboard
+    networkmanagerapplet
 
     # apps
     lutris

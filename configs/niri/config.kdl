@@ -71,16 +71,67 @@ layout {
     border {
         on
         width 2
-        active-gradient from="#cc2d87" to="#ff6998" angle=45
+        active-gradient from="#f058aeff" to="#ff7fa7ff" angle=45
         inactive-gradient from="#505050" to="#808080" angle=45
         urgent-color "#9b0000"
     }
 }
 
+workspace "main"
+workspace "chats"
+workspace "notes"
+workspace "media"
+workspace "recording"
+
 window-rule {
     clip-to-geometry true
     geometry-corner-radius 8
     draw-border-with-background false
+}
+
+window-rule {
+    match app-id="zen"
+    default-column-width { proportion 0.66666; }
+}
+
+window-rule {
+    match app-id="codium"
+    default-column-width { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="org.telegram.desktop"
+    open-on-workspace "chats"
+}
+
+window-rule {
+    match app-id="vesktop"
+    open-on-workspace "chats"
+}
+
+window-rule {
+    match app-id="obsidian"
+    open-on-workspace "notes"
+    default-column-width { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="spotify"
+    open-on-workspace "media"
+    default-column-width { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="com.obsproject.Studio"
+    open-on-workspace "recording"
+    default-column-width { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="blueman-manager"
+    open-floating true
+    default-column-width { fixed 400; }
+    default-window-height { fixed 600; }
 }
 
 window-rule {
@@ -95,27 +146,6 @@ window-rule {
     open-floating true
     default-column-width { fixed 400; }
     default-window-height { fixed 600; }
-}
-
-window-rule {
-    match app-id="blueman-manager"
-    open-floating true
-    default-column-width { fixed 400; }
-    default-window-height { fixed 600; }
-}
-
-window-rule {
-    match app-id="codium"
-    default-column-width { 
-        proportion 1.0;
-    }
-}
-
-window-rule {
-    match app-id="zen"
-    default-column-width {
-        proportion 0.66666;
-    }
 }
 
 binds {
