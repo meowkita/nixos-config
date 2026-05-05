@@ -23,13 +23,21 @@
     swaybg
     waybar
     fuzzel
+    blueman
+    cliphist
     obsidian
     vscodium
     swayidle
     fastfetch
     alacritty
+    pavucontrol
+    wl-clipboard
+    gnome-keyring
     swaylock-effects
     telegram-desktop
+    bitwarden-desktop
+    networkmanagerapplet
+    power-profiles-daemon
 
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

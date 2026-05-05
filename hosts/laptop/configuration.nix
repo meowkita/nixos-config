@@ -26,7 +26,10 @@
   hardware = {
     graphics.enable = true;
     graphics.enable32Bit = true;
-    bluetooth.enable = true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
   };
   
   networking = {
@@ -40,11 +43,23 @@
 
   services = {
     xserver.enable = true;
+    gnome.gnome-keyring.enable = true;
+    power-profiles-daemon.enable = true;
     pipewire = {
       enable = true;
       pulse.enable = true;
     };
   };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+    ];
+  };
+
+  security.polkit.enable = true;
 
   environment = {
     variables = {
