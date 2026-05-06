@@ -1,13 +1,17 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 34,
+  "height": 38,
   "spacing": 8,
+  "margin-top": 8,
+  "margin-left": 8,
+  "margin-right": 8,
   "reload_style_on_change": true,
 
   "modules-left": ["niri/workspaces", "niri/window"],
   "modules-center": ["clock"],
   "modules-right": [
+    "tray",
     "cpu",
     "memory",
     "pulseaudio",
@@ -18,11 +22,7 @@
   ],
 
   "niri/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "active": "",
-      "default": "",
-    },
+    "format": "{index}",
   },
   "niri/window": {
     "format": "{}",
@@ -31,6 +31,19 @@
 
   "clock": {
     "format": "{:%a %d %b  %H:%M}",
+    "tooltip": true,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right",
+      "format": {
+        "months": "<span color='#78e7e8'><b>{}</b></span>",
+        "days": "<span color='#fff4d6'>{}</span>",
+        "weeks": "<span color='#ff7a8a'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffd166'><b>{}</b></span>",
+        "today": "<span color='#ff7a8a'><b><u>{}</u></b></span>",
+      },
+    },
   },
 
   "cpu": {
@@ -61,7 +74,7 @@
   "network": {
     "tooltip": false,
     "format-wifi": "󰖩 {essid}",
-    "format-ethernet": "󰈀 {ifname}",
+    "format-ethernet": "󰈀 wired",
     "format-disconnected": "󰖪 offline",
     "on-click": "nm-connection-editor",
   },
@@ -77,5 +90,9 @@
   "battery": {
     "format": "{icon} {capacity}%",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8,
   },
 }

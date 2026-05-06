@@ -35,7 +35,8 @@ output "eDP-1" {
 }
 
 overview {
-    zoom 0.35
+    zoom 0.4
+    backdrop-color "#13262dff"
 }
 
 gestures {
@@ -71,9 +72,17 @@ layout {
     border {
         on
         width 2
-        active-gradient from="#f058aeff" to="#ff7fa7ff" angle=45
-        inactive-gradient from="#505050" to="#808080" angle=45
-        urgent-color "#9b0000"
+        active-gradient from="#ff7a8aff" to="#e6e878ff" angle=45
+        inactive-gradient from="#22313acc" to="#16242ccc" angle=45
+        urgent-color "#ff3b6b"
+    }
+
+    shadow {
+        on
+        spread 4
+        softness 30
+        offset x=0 y=4
+        color "#00000070"
     }
 }
 
@@ -152,6 +161,8 @@ binds {
     Mod+A repeat=false { spawn "fuzzel"; }
     Mod+L repeat=false { spawn "swaylock"; }
     Mod+Q repeat=false { spawn "alacritty"; }
+    Mod+Shift+9        { spawn-sh "killall -r waybar; waybar"; }
+    Mod+Shift+0        { spawn-sh "killall -r swaybg; swaybg -i ~/.config/swaybg/nms.jpg -m fill"; }
 
     Mod+C   repeat=false { close-window; }
     Mod+Tab repeat=false { toggle-overview; }
@@ -174,11 +185,17 @@ binds {
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
     Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
 
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
     Mod+Shift+3 { move-column-to-workspace 3; }
     Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
 
     XF86MonBrightnessUp   { spawn-sh "brightnessctl --class=backlight set +10%"; }
     XF86MonBrightnessDown { spawn-sh "brightnessctl --class=backlight set 10%-"; }
@@ -200,11 +217,11 @@ prefer-no-csd
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-spawn-at-startup "Telegram"
-spawn-at-startup "vesktop"
-spawn-at-startup "obsidian"
-spawn-at-startup "spotify"
-spawn-at-startup "obs"
+spawn-sh-at-startup "Telegram"
+spawn-sh-at-startup "vesktop"
+spawn-sh-at-startup "obsidian"
+spawn-sh-at-startup "spotify"
+spawn-sh-at-startup "obs"
 
 spawn-at-startup "mako"
 spawn-at-startup "waybar"
