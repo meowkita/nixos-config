@@ -17,22 +17,6 @@
 
   time.timeZone = "Asia/Almaty";
   i18n.defaultLocale = "en_US.UTF-8";
-  
-  programs.niri.enable = true;
-  programs.xwayland.enable = true;
-
-  hardware.graphics.enable = true;
-
-  services.xserver.enable = true;
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
-  ];
 
   users.users.meowkita = {
     isNormalUser = true;

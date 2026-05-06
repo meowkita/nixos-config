@@ -4,32 +4,20 @@
   home.stateVersion = "25.11";
   home.username = "meowkita";
   home.homeDirectory = "/home/meowkita";
-  
-  home.file.".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
-  home.file.".config/swaylock/config".source = ../../configs/swaylock/config;
-  home.file.".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
-  home.file.".config/alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
 
-  home.packages = with pkgs; [
-    bibata-cursors
-    papirus-icon-theme
+  home.packages = with pkgs; [];
 
-    mako
-    waybar
-    fuzzel
-    vscodium
-    swayidle
-    alacritty
-    swaylock-effects
+  programs = {
+    bash = {
+      enable = true;
+    };
 
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-  ];
-
-  gtk = {
-    enable = true;
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+    git = {
+      enable = true;
+      settings.user = {
+        name = "meowkita";
+        email = "meowkita@proton.me";
+      };
     };
   };
 
