@@ -164,12 +164,13 @@ binds {
     Mod+Shift+9        { spawn-sh "killall -r waybar; waybar"; }
     Mod+Shift+0        { spawn-sh "killall -r swaybg; swaybg -i ~/.config/swaybg/nms.jpg -m fill"; }
 
-    Mod+C   repeat=false { close-window; }
     Mod+Tab repeat=false { toggle-overview; }
-
+    
+    Mod+C       repeat=false { close-window; }
     Mod+R       repeat=false { switch-preset-column-width; }
     Mod+F       repeat=false { maximize-column; }
     Mod+Shift+F repeat=false { fullscreen-window; }
+    Mod+Shift+V repeat=false { toggle-window-floating; }
 
     Mod+Left  repeat=false { focus-column-left; }
     Mod+Right repeat=false { focus-column-right; }
