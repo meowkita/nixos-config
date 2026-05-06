@@ -6,41 +6,59 @@
   home.homeDirectory = "/home/meowkita";
   
   home.file = {
+    ".config/swaybg/nms.jpg".source = ../../configs/swaybg/nms.jpg;
     ".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
     ".config/swaylock/config".source = ../../configs/swaylock/config;
     ".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
-    ".config/swaybg/wallpaper.png".source = ../../configs/swaybg/wallpaper.png;
+    ".config/waybar/style.css".source = ../../configs/waybar/style.css;
+    ".config/waybar/config.jsonc".source = ../../configs/waybar/config.jsonc;
     ".config/VSCodium/product.json".source = ../../configs/vscode/product.json;
     ".config/VSCodium/User/settings.json".source = ../../configs/vscode/settings.json;
     ".config/alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
   };
 
   home.packages = with pkgs; [
+    # theming
     bibata-cursors
     papirus-icon-theme
 
+    # core desktop
     mako
     swaybg
     waybar
     fuzzel
+    swayidle
+    nautilus
+    alacritty
+    swaylock-effects
+
+    # system utilities
     blueman
     cliphist
-    obsidian
-    vscodium
-    swayidle
     fastfetch
-    alacritty
     pavucontrol
     wl-clipboard
-    gnome-keyring
-    swaylock-effects
-    telegram-desktop
-    bitwarden-desktop
     networkmanagerapplet
     power-profiles-daemon
 
+    # apps
+    spotify
+    obsidian
+    vscodium
+    gnome-keyring
+    telegram-desktop
+    bitwarden-desktop
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+
+  home.pointerCursor = {
+    size = 24;
+    name = "Bibata-Modern-Ice";
+    package = pkgs.bibata-cursors;
+
+    gtk.enable = true;
+    x11.enable = true;
+  };
 
   gtk = {
     enable = true;
@@ -62,13 +80,12 @@
     };
   };
 
-  home.pointerCursor = {
-    size = 24;
-    name = "Bibata-Modern-Ice";
-    package = pkgs.bibata-cursors;
+  xdg.mimeApps = {
+    enable = true;
 
-    gtk.enable = true;
-    x11.enable = true;
+    defaultApplications = {
+      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+    };
   };
 
   dconf.settings = {
