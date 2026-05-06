@@ -11,7 +11,7 @@
   boot.loader.limine.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos-vm";
+  networking.hostName = "anomaly";
   networking.networkmanager.enable = true;
   networking.firewall.enable = false;
 

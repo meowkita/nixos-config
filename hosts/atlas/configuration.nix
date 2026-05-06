@@ -35,7 +35,7 @@
   };
 
   networking = {
-    hostName = "desktop";
+    hostName = "atlas";
     networkmanager.enable = true;
     firewall.enable = false;
   };
