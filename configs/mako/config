@@ -1,0 +1,31 @@
+anchor=top-right
+layer=overlay
+max-visible=5
+sort=-time
+width=360
+height=140
+margin=16
+padding=16
+border-size=2
+border-radius=8
+background-color=#16242cf2
+border-color=#78e7e866
+text-color=#fff4d6ff
+progress-color=over #ff7a8a
+icons=1
+max-icon-size=48
+default-timeout=5000
+ignore-timeout=0
+font=JetBrainsMono Nerd Font 10
+markup=1
+outer-margin=0
+
+[urgency=low]
+border-color=#78e7e844
+
+[urgency=normal]
+border-color=#78e7e888
+
+[urgency=high]
+border-color=#ff7a8aff
+background-color=#2a1f24f2

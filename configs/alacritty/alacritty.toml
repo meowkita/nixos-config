@@ -1,8 +1,46 @@
-[font]
-size = 12
-
-[font.normal]
-family = "JetBrainsMono Nerd Font"
-
 [window]
-decorations = "none"
+opacity = 0.88
+blur = true
+padding = { x = 14, y = 14 }
+decorations = "None"
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+size = 12.5
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+blink_interval = 500
+
+[colors.primary]
+background = "#16242c"
+foreground = "#fff4d6"
+
+[colors.cursor]
+text = "#16242c"
+cursor = "#78e7e8"
+
+[colors.selection]
+text = "#16242c"
+background = "#78e7e8"
+
+[colors.normal]
+black   = "#22313a"
+red     = "#ff7a8a"
+green   = "#a6e3a1"
+yellow  = "#ffd166"
+blue    = "#78e7e8"
+magenta = "#ff9ecb"
+cyan    = "#78e7e8"
+white   = "#fff4d6"
+
+[colors.bright]
+black   = "#52646f"
+red     = "#ff9aa5"
+green   = "#b8f0b2"
+yellow  = "#ffe08a"
+blue    = "#9ff3f4"
+magenta = "#ffb6d8"
+cyan    = "#b2ffff"
+white   = "#ffffff"

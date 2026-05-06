@@ -6,6 +6,7 @@
   home.homeDirectory = "/home/meowkita";
 
   home.file = {
+    ".config/mako/config".source = ../../configs/mako/config;
     ".config/swaybg/nms.jpg".source = ../../configs/swaybg/nms.jpg;
     ".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
     ".config/swaylock/config".source = ../../configs/swaylock/config;

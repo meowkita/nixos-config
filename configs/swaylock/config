@@ -7,30 +7,49 @@ screenshots
 font=JetBrainsMono Nerd Font
 font-size=24
 
-effect-blur=10x0
+effect-blur=10x3
 effect-greyscale
 
 indicator
 indicator-radius=80
 indicator-thickness=10
 
-text-color=ffc9da
-text-ver-color=ffc9da
-text-clear-color=ffc9da
-text-wrong-color=ffc9da
-text-caps-lock-color=ffc9da
+# text
+text-color=fff4d6ff
+text-ver-color=78e7e8ff
+text-clear-color=ffd166ff
+text-wrong-color=ff7a8aff
+text-caps-lock-color=ffd166ff
 
-ring-color=ff6998
-ring-ver-color=ff6998
-ring-wrong-color=ff6998
-ring-clear-color=ff6998
-ring-caps-lock-color=ff6998
+# rings
+ring-color=78e7e899
+ring-ver-color=78e7e8ff
+ring-clear-color=ffd166ff
+ring-wrong-color=ff7a8aff
+ring-caps-lock-color=ffd166ff
 
-inside-color=191919
-inside-ver-color=191919
-inside-wrong-color=191919
-inside-clear-color=191919
-inside-caps-lock-color=191919
+# inside
+inside-color=16242ccc
+inside-ver-color=16242ccc
+inside-clear-color=16242ccc
+inside-wrong-color=16242ccc
+inside-caps-lock-color=16242ccc
 
-key-hl-color=cc2d87
+# key feedback
+key-hl-color=ff7a8aff
 separator-color=00000000
+
+# line colors
+line-color=00000000
+line-ver-color=00000000
+line-clear-color=00000000
+line-wrong-color=00000000
+
+# layout
+layout-bg-color=00000000
+layout-border-color=00000000
+layout-text-color=c7d6d9ff
+
+# dates
+datestr=%a %d %b
+timestr=%H:%M
