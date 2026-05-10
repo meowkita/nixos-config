@@ -11,6 +11,7 @@
     ".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
     ".config/swaylock/config".source = ../../configs/swaylock/config;
     ".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
+    ".config/fuzzel/powermenu.sh".source = ../../configs/fuzzel/powermenu.sh;
     ".config/waybar/style.css".source = ../../configs/waybar/style.css;
     ".config/waybar/config.jsonc".source = ../../configs/waybar/config.jsonc;
     ".config/VSCodium/product.json".source = ../../configs/vscode/product.json;

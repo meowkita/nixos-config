@@ -163,6 +163,7 @@ binds {
     Mod+A repeat=false { spawn "fuzzel"; }
     Mod+L repeat=false { spawn "swaylock"; }
     Mod+Q repeat=false { spawn "alacritty"; }
+    Mod+Escape         { spawn-sh "~/.config/fuzzel/powermenu.sh"; }
     Mod+Shift+9        { spawn-sh "killall -r waybar; waybar"; }
     Mod+Shift+0        { spawn-sh "killall -r swaybg; swaybg -i ~/.config/swaybg/nms.jpg -m fill"; }
 
