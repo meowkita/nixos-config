@@ -24,6 +24,7 @@ window#waybar.empty #window {
 #bluetooth,
 #network,
 #battery,
+#language,
 #power-profiles-daemon,
 #tray {
   background: rgba(22, 36, 44, 0.72);
@@ -39,6 +40,7 @@ window#waybar.empty #window {
 #bluetooth:hover,
 #network:hover,
 #battery:hover,
+#language:hover,
 #power-profiles-daemon:hover {
   background: rgba(77, 237, 239, 0.06);
 }
@@ -97,7 +99,11 @@ window#waybar.empty #window {
 }
 
 #network {
-  color: #78e7e8;
+  color: #6bbcff;
+}
+
+#language {
+  color: #c9a9ff;
 }
 
 #cpu {

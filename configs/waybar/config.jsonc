@@ -17,6 +17,7 @@
     "pulseaudio",
     "bluetooth",
     "network",
+    "niri/language",
     "power-profiles-daemon",
     "battery",
   ],
@@ -46,6 +47,10 @@
     },
   },
 
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8,
+  },
   "cpu": {
     "interval": 2,
     "tooltip": true,
@@ -78,6 +83,12 @@
     "format-disconnected": "󰖪 offline",
     "on-click": "nm-connection-editor",
   },
+  "niri/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-ru": "RU",
+    "tooltip": false,
+  },
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}",
@@ -90,9 +101,5 @@
   "battery": {
     "format": "{icon} {capacity}%",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-  },
-  "tray": {
-    "icon-size": 18,
-    "spacing": 8,
   },
 }
