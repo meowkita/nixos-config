@@ -34,6 +34,7 @@
     swayidle
     nautilus
     alacritty
+    nautilus-python
     swaylock-effects
 
     # system utilities
@@ -46,6 +47,10 @@
     networkmanagerapplet
 
     # apps
+    zip
+    unrar
+    unzip
+    p7zip
     lutris
     blender
     vesktop
@@ -53,6 +58,8 @@
     obsidian
     vscodium
     obs-studio
+    file-roller
+    qbittorrent
     prismlauncher
     telegram-desktop
     bitwarden-desktop
