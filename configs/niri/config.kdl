@@ -111,11 +111,13 @@ window-rule {
 window-rule {
     match app-id="org.telegram.desktop"
     open-on-workspace "chats"
+    default-column-width { proportion 0.66666; }
 }
 
 window-rule {
     match app-id="vesktop"
     open-on-workspace "chats"
+    default-column-width { proportion 0.66666; }
 }
 
 window-rule {
