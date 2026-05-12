@@ -47,6 +47,7 @@
 
     # development
     go
+    gcc
     rustup
 
     # apps
@@ -59,6 +60,7 @@
     vscodium
     file-roller
     gnome-keyring
+    android-studio
     telegram-desktop
     bitwarden-desktop
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default

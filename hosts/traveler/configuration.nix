@@ -33,7 +33,7 @@
   };
   
   networking = {
-    hostName = "laptop";
+    hostName = "traveler";
     networkmanager.enable = true;
     firewall.enable = false;
   };
