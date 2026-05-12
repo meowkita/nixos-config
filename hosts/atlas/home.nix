@@ -61,6 +61,7 @@
     file-roller
     qbittorrent
     prismlauncher
+    android-studio
     telegram-desktop
     bitwarden-desktop
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
