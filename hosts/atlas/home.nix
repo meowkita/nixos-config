@@ -46,6 +46,11 @@
     wl-clipboard
     networkmanagerapplet
 
+    # development
+    go
+    gcc
+    rustup
+
     # apps
     zip
     unrar
