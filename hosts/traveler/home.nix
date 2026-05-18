@@ -43,7 +43,6 @@
     pavucontrol
     wl-clipboard
     networkmanagerapplet
-    power-profiles-daemon
 
     # development
     go
