@@ -47,6 +47,7 @@
     # development
     go
     gcc
+    nodejs
     rustup
 
     # apps
