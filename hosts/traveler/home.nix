@@ -43,11 +43,11 @@
     pavucontrol
     wl-clipboard
     networkmanagerapplet
-    power-profiles-daemon
 
     # development
     go
     gcc
+    nodejs
     rustup
     bubblewrap
 

@@ -28,7 +28,7 @@ cursor {
 }
 
 output "eDP-1" {
-    mode "3200x2000@120.000"
+    mode "3200x2000@60.000"
     scale 1.75
     transform "normal"
     position x=1000 y=0
