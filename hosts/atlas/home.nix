@@ -50,6 +50,7 @@
     go
     gcc
     rustup
+    bubblewrap
 
     # apps
     zip
