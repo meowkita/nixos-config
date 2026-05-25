@@ -98,9 +98,41 @@
 
   programs = {
     niri.enable = true;
-    steam.enable = true;
     gamemode.enable = true;
     xwayland.enable = true;
+  };
+
+  programs.steam = {
+    enable = true;
+    protontricks.enable = true;    
+
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ];
+
+    extraPackages = with pkgs; [
+      freetype
+      fontconfig
+    ];
+
+    package = pkgs.steam.override {
+      extraPkgs = pkgs': with pkgs'; [
+        freetype
+        fontconfig
+        zlib
+        libpng
+        libjpeg
+        libxkbcommon
+        wayland
+
+        xorg.libX11
+        xorg.libXext
+        xorg.libXrender
+        xorg.libXi
+        xorg.libXrandr
+        xorg.libXcursor
+      ];
+    };
   };
 
   system.stateVersion = "25.11";

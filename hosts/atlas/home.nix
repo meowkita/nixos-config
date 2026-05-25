@@ -38,6 +38,8 @@
     swaylock-effects
 
     # system utilities
+    freetype
+    fontconfig
     blueman
     cliphist
     fastfetch
