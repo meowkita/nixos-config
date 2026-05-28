@@ -59,6 +59,7 @@
     spotify
     obsidian
     vscodium
+    zed-editor
     file-roller
     gnome-keyring
     android-studio
