@@ -102,6 +102,15 @@
     xwayland.enable = true;
   };
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    zlib
+    stdenv.cc.cc
+    openssl
+    curl
+    libgcc
+  ];
+
   programs.steam = {
     enable = true;
     protontricks.enable = true;    
