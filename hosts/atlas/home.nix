@@ -65,6 +65,7 @@
     spotify
     obsidian
     vscodium
+    zed-editor
     obs-studio
     file-roller
     qbittorrent

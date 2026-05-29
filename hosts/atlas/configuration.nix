@@ -131,6 +131,12 @@
         xorg.libXi
         xorg.libXrandr
         xorg.libXcursor
+
+        pkgsi686Linux.freetype
+        pkgsi686Linux.fontconfig
+        pkgsi686Linux.zlib
+        pkgsi686Linux.libpng
+        pkgsi686Linux.libjpeg
       ];
     };
   };
