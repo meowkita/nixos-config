@@ -65,11 +65,11 @@
     spotify
     obsidian
     vscodium
-    zed-editor
     obs-studio
     file-roller
     qbittorrent
     prismlauncher
+    zed-editor-fhs
     android-studio
     telegram-desktop
     bitwarden-desktop
