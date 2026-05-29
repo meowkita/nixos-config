@@ -51,6 +51,7 @@
     # development
     go
     gcc
+    zlib
     rustup
     bubblewrap
 
