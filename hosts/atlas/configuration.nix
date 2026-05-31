@@ -80,7 +80,7 @@
       tree
       wget
       btop
-      jdk17
+      jdk21
       neovim
       killall
       xwayland-satellite
