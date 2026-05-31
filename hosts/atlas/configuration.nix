@@ -80,6 +80,7 @@
       tree
       wget
       btop
+      jdk17
       neovim
       killall
       xwayland-satellite
@@ -113,7 +114,7 @@
 
   programs.steam = {
     enable = true;
-    protontricks.enable = true;    
+    protontricks.enable = true;
 
     extraCompatPackages = with pkgs; [
       proton-ge-bin
