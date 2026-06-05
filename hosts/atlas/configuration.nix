@@ -80,6 +80,7 @@
       tree
       wget
       btop
+      jdk21
       neovim
       killall
       xwayland-satellite
@@ -102,9 +103,18 @@
     xwayland.enable = true;
   };
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    zlib
+    stdenv.cc.cc
+    openssl
+    curl
+    libgcc
+  ];
+
   programs.steam = {
     enable = true;
-    protontricks.enable = true;    
+    protontricks.enable = true;
 
     extraCompatPackages = with pkgs; [
       proton-ge-bin
@@ -131,6 +141,12 @@
         xorg.libXi
         xorg.libXrandr
         xorg.libXcursor
+
+        pkgsi686Linux.freetype
+        pkgsi686Linux.fontconfig
+        pkgsi686Linux.zlib
+        pkgsi686Linux.libpng
+        pkgsi686Linux.libjpeg
       ];
     };
   };

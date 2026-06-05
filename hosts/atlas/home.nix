@@ -51,6 +51,7 @@
     # development
     go
     gcc
+    zlib
     rustup
     bubblewrap
 
@@ -65,6 +66,7 @@
     spotify
     obsidian
     vscodium
+    zed-editor
     obs-studio
     file-roller
     qbittorrent
