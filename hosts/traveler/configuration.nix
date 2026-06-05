@@ -9,7 +9,7 @@
     allowUnfree = true;
     android_sdk.accept_license = true;
   };
-  
+
   nix = {
     settings.experimental-features = [ "nix-command" "flakes" ];
     optimise.automatic = true;
@@ -19,7 +19,7 @@
       automatic = true;
     };
   };
-  
+
   boot = {
     loader.limine.enable = true;
     loader.efi.canTouchEfiVariables = true;
@@ -41,7 +41,16 @@
       powerOnBoot = false;
     };
   };
-  
+
+  virtualisation = {
+    containers.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
   networking = {
     hostName = "traveler";
     networkmanager.enable = true;
@@ -56,7 +65,6 @@
     udisks2.enable = true;
     xserver.enable = true;
     gnome.gnome-keyring.enable = true;
-    # power-profiles-daemon.enable = false;
     pipewire = {
       enable = true;
       pulse.enable = true;
@@ -124,7 +132,7 @@
 
   users.users.meowkita = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "dialout" "lp" ];
   };
 
   programs = {

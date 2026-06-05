@@ -4,7 +4,7 @@
   home.stateVersion = "25.11";
   home.username = "meowkita";
   home.homeDirectory = "/home/meowkita";
-  
+
   home.file = {
     ".config/mako/config".source = ../../configs/mako/config;
     ".config/swaybg/nms.jpg".source = ../../configs/swaybg/nms.jpg;
@@ -149,7 +149,7 @@
       name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
     };
-    
+
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
